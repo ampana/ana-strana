@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/4cd7d2d243.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>My Blog</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.7em;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3 {
+        padding-bottom: 20px;
+      }
+      ul{
+        list-style: none;
+      }
+      p {
+        margin: 10px 0px;
+      }
+      .container {
+        margin: auto;
+        max-width: 1100px;
+        overflow: auto;
+        padding: 0 20px;
+      }
+      .text-primary {
+        color: #f7c08a;
+      }
+      .lead {
+        font-size: 20px;
+        color: black;
+      }
+      .btn {
+        display: inline block;
+        font-size: 18px;
+        color: #fff;
+        background: #333;
+        padding: 13px 20px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        color: #f7c08a;
+        background: #333;
+      }
+      .btn-light {
+        background: #f4f4f4;
+        color: #333;
+      }
+      a.btn-light:hover {
+        background: #f7c08a;
+        color: #fff;
+      }
+      .bg-dark {
+        background: #333;
+        color: #f7c08a;
+      }
+      .bg-light {
+        background: #f4f4f4;
+        color: #333;
+      }
+      .bg-primary {
+        color: #333;
+        background: #f7c08a;
+      }
+     #navbar {
+        background: #333;
+        color: white;
+        overflow: auto;
+      }
+      #navbar a {
+        color: white;
+      }
+      #navbar .logo {
+        float: left;
+        padding: 20px;
+      }
+      #navbar ul {
+        list-style: none;
+        float: right;
+      }
+      #navbar ul li {
+        float: left;
+      }
+      #navbar ul li a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+      }
+      #navbar ul li a:hover {
+        background: #444;
+        color: #f7c08a;
+      }
+      #navbar .current {
+        background: #444;
+        color: #f7c08a;
+      }
+      #main-footer {
+        background: #444;
+        color: white;
+        padding: 5px;
+        height: auto;
+      }
+      #main-footer p{
+        float: left;
+        margin-top: 2em;
+      }
+      #main-footer .container ul{
+        float:right;
+      }
+      #main-footer .container ul li{
+        float: left;
+        padding: 1em;
+        font-size: 2em;
+      }
+      #main-footer .container ul li a i{
+        color: white;
+      }
+
+      .btn {
+        display: inline block;
+        font-size: 18px;
+        color: #fff;
+        background: #333;
+        padding: 13px 20px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        color: #f7c08a;
+        background: #333;
+      }
+      .btn-light {
+        background: #f4f4f4;
+        color: #333;
+      }
+      a.btn-light:hover {
+        background: #f7c08a;
+        color: #fff;
+      }
+      textarea {  
+        background-color:#fad8b7; 
+        size: 100px 100px; 
+        letter-spacing: 1.5px;
+        padding: 10px;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px  #ccc;
+        box-shadow: 0.5px 0.5px 0.5px #999;
+        font-family: Verdana, Geneva, Tahoma, sans-serif ; 
+        overflow: none;    }
+      .showcase-content p {
+        padding: 10px;
+        line-height: 1.7em;
+        margin-left: 1.7em;
+
+  }
+
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.html">AnA</a></h1>
+          <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="gallery.html" >Gallery</a></li>
+            <li><a href="blog.html" class="current">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <p>What do you wanna see next?</p>
+      <textarea rows="10" cols="75">
+       
+      </textarea>
+      
+      <br> 
+      <div class="showcase-content" > 
+      <p> Which section did you like more? </p>
+        <label class="container">Home 
+          <input type="checkbox" float="right";>
+        </label>
+        <label class="container">Gallery
+          <input type="checkbox" >
+        </label>
+        <a href="/index.html" class="btn btn-light"; margin-bottom = 40px ; >Submit</a>
+    </div>
+    <br>
+  
+  
+      <footer id="main-footer">
+        <div class="container">
+          <p>Ana Ampova 5/2017 &copy; October, 2020 All rights reserved.</p>
+          <ul>
+            <li> <a href="https://www.facebook.com/anaa1609/" target="_blank"><i class="fab fa-facebook"></i></a> </li>
+            <li><a href="https://www.instagram.com/amp.ana/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+  
+      </footer>
+
+</body>
+</html>

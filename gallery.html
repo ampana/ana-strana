@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/4cd7d2d243.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>My gallery</title>
+    <style type = "text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.7em;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3 {
+        padding-bottom: 20px;
+      }
+      p {
+        margin: 10px 0px;
+      }
+      .container {
+        margin: auto;
+        max-width: 1100px;
+        overflow: auto;
+        padding: 0 20px;
+      }
+      ul{
+        list-style: none;
+      }
+      .text-primary {
+        color: #f7c08a;
+      }
+      .lead {
+        font-size: 20px;
+        color: black;
+      }
+      .btn {
+        display: inline block;
+        font-size: 18px;
+        color: #fff;
+        background: #333;
+        padding: 13px 20px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        color: #f7c08a;
+        background: #333;
+      }
+      .btn-light {
+        background: #f4f4f4;
+        color: #333;
+      }
+      a.btn-light:hover {
+        background: #f7c08a;
+        color: #fff;
+      }
+      .bg-dark {
+        background: #333;
+        color: #f7c08a;
+      }
+      .bg-light {
+        background: #f4f4f4;
+        color: #333;
+      }
+      .bg-primary {
+        color: #333;
+        background: #f7c08a;
+      }
+     #navbar {
+        background: #333;
+        color: white;
+        overflow: auto;
+      }
+      #navbar a {
+        color: white;
+      }
+      #navbar .logo {
+        float: left;
+        padding: 20px;
+      }
+      #navbar ul {
+        list-style: none;
+        float: right;
+      }
+      #navbar ul li {
+        float: left;
+      }
+      #navbar ul li a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+      }
+      #navbar ul li a:hover {
+        background: #444;
+        color: #f7c08a;
+      }
+      #navbar .current {
+        background: #444;
+        color: #f7c08a;
+      }
+      #main-footer {
+        background: #444;
+        color: white;
+        padding: 5px;
+        height: auto;
+      }
+      #main-footer p{
+        float: left;
+        margin-top: 2em;
+      }
+      #main-footer .container ul{
+        float:right;
+      }
+      #main-footer .container ul li{
+        float: left;
+        padding: 1em;
+        font-size: 2em;
+      }
+      #main-footer .container ul li a i{
+        color: white;
+      }
+      .picutre-desc {
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .cont{
+          display: grid;
+          grid-template-columns: repeat(3,auto);
+          grid-gap: 1em;
+      }
+      .picture-location{
+        text-align: left;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      i{
+          color: #f7c08a;
+          opacity: 1;
+          font-size: 1.3em ;  
+      }
+      i:hover {
+        color: #f7c08a;
+          opacity: 1;
+        }
+      .insta-tag{
+          color: #736AFF; 
+      }
+      .likes {
+        width: 130px;
+        height: 195px;
+        
+        display: inline-block;
+    } 
+    .likes:hover {
+        
+        background-color: #f7c08a;
+        color: #f7c08a;
+    }
+    .foreground-image{
+        width: 115px ; 
+        height: 115px;
+        border-radius: 50%; 
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 1.5px;
+        margin-right: 1.5px;
+        z-index: 2;
+        border: 1px #fff solid; 
+        background-image: linear-gradient(to right top, #f7c08a 35%, #fff 65%, rgb(161, 161, 161));
+        background-origin: border-box;
+        background-size: 1px;
+        
+    }
+    .foreground-image:hover{
+                        -webkit-transform: scale(5, 8) ;
+                        -moz-transform: scale(5, 8) ;
+                        -o-transform: scale(5, 8) ;
+                        transform: scale(5, 8) ;
+                        margin-top: 250px;  
+                        border-radius: 0%;
+                        border: none;
+                        background-image: none;
+                        background-origin: border-box;
+                        z-index: 3;
+}
+.tab { 
+       display:inline-block; 
+       margin-left: 40px; 
+}
+ </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.html">AnA</a></h1>
+          <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="gallery.html" class="current">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      
+      <section>
+        <img src = "watterfall.jpg" class = "foreground-image"  
+        style="margin-left: 8em"; 
+         alt = "insta story picture" ; >
+         <img src = "heart.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "sea.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "matka.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "candle.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "book.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "notebook.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "dandelion.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         <img src = "travelling.jpg" class = "foreground-image"
+         alt = "insta story picture"; >
+         
+ </section>
+    <div class = "padding cont">
+
+    <div class = "picture-desc">
+        <figure>
+            <figcaption style="margin-left: 2em">                
+                <i class="fas fa-map-marker-alt" style="display: inline;"></i> In my room  
+            </figcaption>
+        <img src = "puzzle.jpg" width = "400" height = "300" 
+            style="margin-left: 2em" alt = "puzzle">
+        <figcaption style="margin-left: 2em"> 
+            <i class="far fa-heart"></i>   <i class="far fa-comment"></i>
+            <br> 0 likes
+            <br>My 1000 pieces Tower Bridge puzzle that I appsolutely <br> love. 
+        </figcaption>
+    </figure>
+    </div>
+    <div class = "picture-desc">
+        <figure>
+            <figcaption>
+                <i class="fas fa-map-marker-alt" style="display: inline;"></i><a
+                href="https://www.google.com/maps/place/Arena+Armeets+Sofia/@42.6714686,23.3672065,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa85d910a63bbd:0xc094b60f1656296a!8m2!3d42.6714647!4d23.3693952"
+                target="_blank" >
+                 Arena Armeec </a>
+            </figcaption>
+        <img src = "concert.jpg" width = "400" height = "300" 
+            alt = "concert">
+            <figcaption> 
+                <i class="far fa-heart"></i>   <i class="far fa-comment"></i>
+                <br> 0 likes        
+                <br>A day without music is like...just kidding, I have no idea 
+                <i class="far fa-laugh-beam"
+                style="display: inline; color: #333; font-size: 1em; "></i>.
+            </figcaption>
+        </figure>
+        </div>
+
+        <div class = "picture-desc">   
+            <figure> 
+                <figcaption>
+                    <i class="fas fa-map-marker-alt" style="display: inline;"></i><a 
+                    href="https://www.google.com/maps/place/Berovo+lake/@41.6673924,22.8965502,15z/data=!3m1!4b1!4m5!3m4!1s0x14aa11532ed3548d:0x9f93517e50156ed2!8m2!3d41.6689922!4d22.9051355" 
+                    target="_blank" > 
+                     Berovo Lake </a>
+                </figcaption>
+        <img src = "berovsko_ezero.jpg" width = "400" height = "300"
+            alt = "berovsko_ezero">
+            <figcaption> 
+                <i class="far fa-heart"></i>   <i class="far fa-comment"></i>
+                <br> 0 likes 
+                <br>Exploring my country with my beloved <a 
+                href="https://www.instagram.com/ampovasenior/" 
+                target="_blank" > 
+                <span class ="insta-tag"> @ampovasenior</span></a>.
+            </figcaption>
+            </figure>
+        </div>
+</div>
+
+
+
+
+    <footer id="main-footer">
+        <div class="container">
+          <p>Ana Ampova 5/2017 &copy; October, 2020 All rights reserved.</p>
+          <ul>
+            <li> <a href="https://www.facebook.com/anaa1609/" target="_blank"><i class="fab fa-facebook"></i></a> </li>
+            <li><a href="https://www.instagram.com/amp.ana/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+  
+      </footer>
+
+</body>
+</html>
