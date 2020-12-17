@@ -76,11 +76,6 @@ var name;
 
 
 
-
-
-
-
-
 // function thisLike(heart){
 
 //   var heart_id = heart.id ; 
@@ -126,11 +121,6 @@ function start () {
     document.getElementById("like1").innerHTML = localStorage.clickcount_1 + " like(s)";
     var heart = document.getElementById("hearting1");
     heart.src = "heart1.png";
-
-    // var displayOld = localStorage.getItem('commentContent1');
-    // var commentOutput1 = document.getElementById("txtOutput21");
-    // commentOutput1 = localStorage.getItem('commentContent1');
-
   }
   if (localStorage.clickcount2 >= 1){
     document.getElementById("like2").innerHTML = localStorage.clickcount2 + " like(s)";
@@ -142,27 +132,7 @@ function start () {
     var heart = document.getElementById("hearting3");
     heart.src = "heart1.png";
   }
-
-  // k3 = localStorage.clickcountM3;
-  // m3 = parseInt(m3);
-  // if(localStorage.getItem("#my30")) { 
-  //   var n ;
-  //   n = parseInt(n);
-  //   // var gethtml3;
-  //   // n = m3 ; 
-  //   for (n=0; n<=m3; n++){
-  //     // gethtml3 = "#output3"+n+"";
-  //     document.getElementById("#txtOutput23").innerHTML+=localStorage.getItem(("#my3"+n));
-  //   }
-  //   // $('#txtOutput23').html(localStorage.getItem("#txtOutput23"));
-  //   }
-
-
 }
-
-
-
-
 
   function thisLike1(heart) {
 
@@ -224,13 +194,6 @@ function start () {
   
 
 
-
-
-
-
-
-
-
 //   function thisComment(here){
 
 //   var id = here.id ; 
@@ -282,9 +245,6 @@ function start () {
   $(document).ready(function(){
 
 
-
-
- 
     // $("#comBut1").click(function(){
     //     // alert("The paragraph was clicked.");
 
@@ -321,14 +281,7 @@ function start () {
     //     // $("[id^='txtOutput']").val("");
     //     // });
     //   });
-    
-    var m3 = 0;
-    var k3 = localStorage.getItem("numk3") ;
-    m3=parseInt(k3);
-    // while(m3 != localStorage.clickcountM3)
-    // {
-      // m3++;
-    // } 
+
     
       $("[id^='comBut']").click(function(){
         var com = $($("#" + $(this).parent().find('input').attr('id'))).val();
@@ -387,9 +340,4 @@ function start () {
     if(localStorage.getItem("#txtOutput23")) { 
       $('#txtOutput23').html(localStorage.getItem("#txtOutput23"));
       }
-
-
-
-
 });
-
