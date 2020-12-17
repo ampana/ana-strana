@@ -7,9 +7,9 @@
       src="https://kit.fontawesome.com/4cd7d2d243.js"
       crossorigin="anonymous"
     ></script>
-    <title>My Quiz</title>
-    <style>
-        * {
+    <title>Blog</title>
+    <style type = "text/css">
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -27,10 +27,6 @@
       h2,
       h3 {
         padding-bottom: 20px;
-        text-align: center;
-      }
-      ul{
-        list-style: none;
       }
       p {
         margin: 10px 0px;
@@ -40,6 +36,9 @@
         max-width: 1100px;
         overflow: auto;
         padding: 0 20px;
+      }
+      ul{
+        list-style: none;
       }
       .text-primary {
         color: #f7c08a;
@@ -114,116 +113,371 @@
         background: #444;
         color: #f7c08a;
       }
-      #main-footer {
+      #my-footer {
         background: #444;
         color: white;
         padding: 5px;
         height: auto;
       }
-      #main-footer p{
+      #my-footer p{
         float: left;
         margin-top: 2em;
       }
-      #main-footer .container ul{
+      #my-footer .container ul{
         float:right;
       }
-      #main-footer .container ul li{
+      #my-footer .container ul li{
         float: left;
         padding: 1em;
         font-size: 2em;
       }
-      #main-footer .container ul li a i{
+      #my-footer .container ul li a i{
         color: white;
       }
+      .picutre-desc {
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .cont{
+          display: grid;
+          grid-template-columns: repeat(3,auto);
+          grid-gap: 1em;
+      }
+      .picture-location{
+        text-align: left;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      i{
+          color: #f7c08a;
+          opacity: 1;
+          font-size: 1.3em ;  
+      }
+      i:hover {
+        color: #f7c08a;
+          opacity: 1;
+        }
+      .insta-tag{
+          color: #736AFF; 
+      }
 
-      .btn {
-        display: inline block;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  width: 50%;
+  height: 40%;
+}
+
+      ul{
+        list-style: none;
+      }
+      #features #box {
+        float: left;
+        width: 33.3%;
+        padding: 50px;
+        text-align: center;
+      }
+      #features i {
+        margin-bottom: 10px;
+      }
+    .blogTable{
+    	  border: none;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        object-position: center;
+        align-content: center;
+    }
+    .blogTh{
+    	border: solid;
+    }
+
+    .blogTr{
+    	border: solid;
+    }
+    
+    .blogTd{
+        border: solid;
+        height: 50px;
+        /* overflow: scroll; */
+    }
+
+    .blogTextarea{
+    	  border: 0px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-bottom: 20px; */
+        /* object-position: center; */
+        align-content: center;
+        text-align: center;
+        background-color:white ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    } 
+
+    .title{
+        text-align:center;
+    }
+    .com{
+        text-align:center;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown .hobbies-list {
+        list-style: none;
+        text-decoration: none;
+        display: none;
+        z-index: 1;
+      }
+      .dropdown:hover .hobbies-list li {
+        display: block;
         font-size: 18px;
-        color: #fff;
-        background: #333;
+        color: #333;
+        background: #fff;
         padding: 13px 20px;
         text-align: center;
         border: none;
         cursor: pointer;
       }
-      .btn:hover {
+      .dropdown:hover .hobbies-list li:hover {
         color: #f7c08a;
         background: #333;
       }
-      .btn-light {
-        background: #f4f4f4;
-        color: #333;
+      .dropdown:hover .hobbies-list {
+        display: block;
       }
-      a.btn-light:hover {
-        background: #f7c08a;
-        color: #fff;
-      }
-      textarea {  
-        background-color:#fad8b7; 
-        size: 100px 100px; 
-        letter-spacing: 1.5px;
-        padding: 10px;
-        line-height: 1.5;
-        border-radius: 5px;
-        border: 1px  #ccc;
-        box-shadow: 0.5px 0.5px 0.5px #999;
-        font-family: Verdana, Geneva, Tahoma, sans-serif ; 
-        overflow: none;    }
-      .showcase-content p {
-        padding: 10px;
-        line-height: 1.7em;
-        margin-left: 1.7em; 
-  }
+
+  #contact-popup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    color: #676767;
+}
+
+.contact-form {
+    width: 350px;
+    margin: 0px;
+    background-color: white;
+    font-family: Arial;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -255px;
+    box-shadow: 1px 1px 5px #444444;
+    padding: 20px 40px 40px 40px;
+}
+
+#contact-icon {
+    padding: 10px 5px 5px 12px;
+    width: 70px;
+    color: white;
+    box-shadow: 1px 1px 5px #333;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 60px auto;
+}
+
+.info {
+    color: #333;
+    letter-spacing: 2px;
+    padding-left: 5px;
+}
+
+#send {
+    background-color:#f7c08a;
+    border: 1px solid #ffd5ab;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    color: white;
+    /* color: #333 */
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#contact-popup h1 {
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+}
+
+.input-error {
+    border: #f7c08a 1px solid;
+}
 
 
-  #test {
-            border:#f7c08a 3px solid;
-            padding:10px 40px 40px 40px;
-            background-color:#f4f4f4;
-            width:50%;
-            height: 50%;
-            margin: auto; 
-            margin-bottom: 20px;
-            text-align: left;
-            }
-  #test2 {
-            border:#f7c08a 3px solid;
-            padding:10px 40px 40px 40px;
-            background-color:#f4f4f4;
-            width:50%;
-            height: 50%;
-            margin: auto; 
-            margin-bottom: 20px;
-            text-align: left;
-            }
+.showcasePost{
+  border: #f7c08a 1px solid;
+  padding: 10px 5px 5px 12px;
+  box-shadow: 0px 10px 10px #ffd5ab; 
+  margin: auto ; 
+  padding: 15px;
+  width: 70%;
+  text-align: left;
+  font-weight: normal ; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 50px;
+}
 
 
-    </style>
+.showcaseTitle{
+  /* border: rgb(97, 97, 97) 1px solid ; */
+  padding: 10px 5px 5px 12px;
+  box-shadow: 0px 1px 5px #333; 
+  margin: auto ; 
+  margin-bottom: 20px;
+  padding: 0px;
+  width: 70%;
+  text-align: center;
+  font-weight: bold ; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.questionForm{
+  box-shadow:0px 1px 5px rgb(255, 255, 255);
+  border:1px solid  rgb(255, 255, 255);
+  margin: auto ; 
+  margin-bottom: 10px;
+  padding: 0px;
+  width: 70%;
+  text-align: center;
+  font-weight: bold ; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-<script src = "javaScriptQuiz.js"></script>
-<script src = "javaScriptQuiz2.js"></script>
+
+ </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "blog.js"></script>
 
 </head>
 <body>
+
     <nav id="navbar">
         <div class="container">
           <h1 class="logo"><a href="index.html">AnA</a></h1>
           <ul>
             <li><a href="index.html" >Home</a></li>
-            <li><a href="gallery.html" >Gallery</a></li>
-            <li><a href="blog.html" class="current">Quiz</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html" class="current">Blog</a></li>
           </ul>
         </div>
       </nav>
+      <br>
 
-   <br>
-    <h2 id="test_status"></h2>
-    <div id="test"></div>
+        <table class="blogTable" id="blogPosts"> 
+            <th class="showcaseTitle">Title</th>
+            <tr class="showcasePost"><td >Here you can post your ides about this site, what you like or don't like. You will stay anonymus. ;)<br> P.S. You can edit the colors as you want. </td></tr>
+        </table>
 
-    <h2 id="test_status2"></h2>
-    <div id="test2"></div>
-  
-      <footer id="main-footer">
+        <br>
+        <form> 
+            <p class="showcaseTitle"><textarea id="title" placeholder="Type the theme's title you are going to discuss about..." style="font-weight: bold" class="blogTextarea"></textarea></p>
+            <p class="showcasePost" style="text-align: center;"><textarea id="post" placeholder="Type your opinion here..." class="blogTextarea"></textarea></p>
+            <p style="text-align: center;"><button id="blogBut" type="button" class="btn" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">Send</button></p>
+        </form>
+
+
+<div class="questionForm" > 
+<p>Want to stay in touch? Click the heart below and fill the form! </p>
+</div>
+<div id="contact-icon">
+  <img src="storyheart4.png" alt="contact" height="50" width="50">
+</div>
+<div id="contact-popup">
+  <form class="contact-form"  id="contact-form">
+      <!-- method="post" enctype="multipart/form-data"> -->
+      <h1>Contact Us</h1>
+      <div>
+          <div><label>Name: </label><span id="userName-info"  class="info"></span> </div>
+          <div><input type="text" id="userName" name="userName"  class="inputBox" /></div>
+      </div>
+      <div>
+          <div><label>Email: </label><span id="userEmail-info" class="info"></span></div>
+          <div><input type="text" id="userEmail" name="userEmail" class="inputBox" /></div>
+      </div>
+      <div>
+          <div><label>Subject: </label><span id="subject-info" class="info"></span></div>
+          <div><input type="text" id="subject" name="subject" class="inputBox" /> </div>
+      </div>
+      <div>
+          <div><label>Message: </label><span id="userMessage-info" class="info"></span></div>
+          <div><textarea id="message" name="message" class="inputBox"></textarea></div>
+      </div>
+      <div><input type="submit" id="send" name="send" value="Send" /></div>
+  </form>
+</div> 
+
+
+
+
+<section id="features">
+  <div id="box" class="bg-light">
+    <h3>Navbar background color</h3>
+    <br />
+    <div class="dropdown">
+      <a href="#" class="btn btn-dark">Colors</a>
+      <ul class="hobbies-list">
+          <li>
+            <p style="background-color: #f7c08a;" id="colH1"> A </p>
+          </li>
+          <li>
+            <p style="background-color:  #444;" id="colH2"> B </p>
+          </li>
+          <li>
+            <p style="background-color:white" id="colH3"> C </p>
+          </li>
+        </ul>
+    </div>
+  </div>
+  <div id="box" class="bg-dark">
+    <h3>Footer background color</h3>
+    <br />
+    <div class="dropdown">
+      <a href="#" class="btn btn-light">Colors</a>
+      <ul class="hobbies-list">
+          <li>
+            <p style="background-color: #f7c08a;" id="colR1"> A </p>
+          </li>
+          <li>
+            <p style="background-color:  #444;" id="colR2"> B </p>
+          </li>
+          <li>
+            <p style="background-color:white" id="colR3"> C </p>
+          </li>
+        </ul>
+    </div>
+  </div>
+  <div id="box" class="bg-light">
+    <h3>Body background color</h3>
+    <br />
+    <div class="dropdown">
+      <a href="#" class="btn btn-dark">Colors</a>
+      <ul class="hobbies-list">
+          <li>
+            <p style="background-color: #f7c08a;" id="colT1"> A </p>
+          </li>
+          <li>
+            <p style="background-color:  #444;" id="colT2"> B </p>
+          </li>
+          <li>
+            <p style="background-color:white" id="colT3"> C </p>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+      <footer id="my-footer">
         <div class="container">
           <p>Ana Ampova 5/2017 &copy; October, 2020 All rights reserved.</p>
           <ul>
@@ -233,6 +487,5 @@
           </ul>
         </div>
       </footer>
-
 </body>
 </html>

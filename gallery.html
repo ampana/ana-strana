@@ -113,57 +113,56 @@
         background: #444;
         color: #f7c08a;
       }
-      #main-footer {
-        background: #444;
-        color: white;
-        padding: 5px;
-        height: auto;
-      }
-      #main-footer p{
-        float: left;
-        margin-top: 2em;
-      }
-      #main-footer .container ul{
-        float:right;
-      }
-      #main-footer .container ul li{
-        float: left;
-        padding: 1em;
-        font-size: 2em;
-      }
-      #main-footer .container ul li a i{
-        color: white;
-      }
+    #my-footer {
+      background: #444;
+      color: white;
+      padding: 5px;
+      height: auto;
+    }
+    #my-footer p{
+      float: left;
+      margin-top: 2em;
+    }
+    #my-footer .container ul{
+      float:right;
+    }
+    #my-footer .container ul li{
+      float: left;
+      padding: 1em;
+      font-size: 2em;
+    }
+    #my-footer .container ul li a i{
+      color: white;
+    }
       .picutre-desc {
-        text-align: center;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .cont{
-          display: grid;
-          grid-template-columns: repeat(3,auto);
-          grid-gap: 1em;
-      }
-      .picture-location{
-        text-align: left;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      i{
-          color: #f7c08a;
-          opacity: 1;
-          font-size: 1.3em ;  
-      }
-      i:hover {
-        color: #f7c08a;
-          opacity: 1;
-        }
-      .insta-tag{
-          color: #736AFF; 
-      }
-      .likes {
-        width: 130px;
-        height: 195px;
-        
-        display: inline-block;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .cont{
+      display: grid;
+      grid-template-columns: repeat(3,auto);
+      grid-gap: 1em;
+    }
+    .picture-location{
+      text-align: left;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    i{
+      color: #f7c08a;
+      opacity: 1;
+      font-size: 1.3em ;  
+    }
+    i:hover {
+      color: #f7c08a;
+      opacity: 1;
+    }
+    .insta-tag{
+      color: #736AFF; 
+    }
+    .likes {
+      width: 130px;
+      height: 195px;
+      display: inline-block;
     } 
     .likes:hover {
         
@@ -183,143 +182,31 @@
         border: 1px #fff solid; 
         background-image: linear-gradient(to right top, #f7c08a 35%, #fff 65%, rgb(161, 161, 161));
         background-origin: border-box;
-        background-size: 1px;        
+        background-size: 1px;  
+        position:relative;       
     }
     .foreground-image:hover{
-                        -webkit-transform: scale(5, 8) ;
-                        -moz-transform: scale(5, 8) ;
-                        -o-transform: scale(5, 8) ;
-                        transform: scale(5, 8) ;
-                        margin-top: 250px;  
-                        border-radius: 0%;
-                        border: none;
-                        background-image: none;
-                        background-origin: border-box;
-                        z-index: 3;
-                        
-                        /* position:absolute; */
- 
-  
-                        }
-.newImage { 
-      position: absolute;
-      z-index: 4; 
-      opacity: 1;
-      -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
+        -webkit-transform: scale(5, 8) ;
+        -moz-transform: scale(5, 8) ;
+        -o-transform: scale(5, 8) ;
+        transform: scale(5, 8) ;
+        margin-top: 250px;  
+        border-radius: 0%;
+        border: none;
+        background-image: none;
+        background-origin: border-box;
+        z-index: 3;
+        position:relative;
+    }
 
-.hidden-frame {
-      display: none; 
-      position: absolute;
-      z-index: 5;
-      width: 115px ; 
-      height: 115px;
-}
-.hidden-frame:hover {
-      /* display: none;  */
-      position: absolute;
-      z-index: 5;
-      width: 115px ; 
-      height: 115px;
-}
+/* .heart {
+  display: inline;
+} */
+
  </style>
 
-<script type = "text/javascript">
-  var name;
-  name = window.prompt("Enter your username: ");
-
-  function thisComment(here){
-
-  var id = here.id ; 
-  var res_id = id.charAt(6);
-  id_number = parseInt(res_id);
-
-  var printid = "txtOutput2";
-  var printid_conc = printid;
-
-  var clearid = "txtOutput";
-  var clearid_conc = clearid;
-  
-  for (i=1; i<=3; i++){
-    if (i == id_number){
-      printid_conc = printid_conc + i;
-      clearid_conc = clearid_conc + i; 
-    }
-  }
-
-  var txtOutput = document.getElementById(clearid_conc);
-  var output = txtOutput.value;
-
-  var d = new Date();
-  var day = d.getDate();
-  var month = d.getMonth();
-  month=month+1; 
-  var year = d.getFullYear();
-
-  var h = d.getHours();
-  var m = d.getMinutes();
-
-  var node = document.createElement("li");
-  // var textnode = document.createTextNode( name + ": " + output + "\n" + n + "."+ m +"."+k); 
-  var textnode = document.createTextNode( name + ": " + output );      
-  node.appendChild(textnode);  
-
-
-  document.getElementById(printid_conc).appendChild(node); 
-  document.getElementById(clearid_conc).value=""; 
-
-  var node2 = document.createElement("li");
-  node2.setAttribute('style','font-size:0.7em');
-  var textnode2 = document.createTextNode( h+":"+m+", "+ day + "."+ month +"."+ year); 
-  node2.appendChild(textnode2);
-  document.getElementById(printid_conc).appendChild(node2);
-  } 
-
-window.addEventListener("click",thisComment,false) 
-
-function thisLike(heart){
-
-  var heart_id = heart.id ; 
-  var res_heart_id = heart_id.charAt(8);
-  id_heart_number = parseInt(res_heart_id);
-
-  iconImg = document.getElementById( heart_id );
-  iconImg.addEventListener( "click", thisLike, false );
-
-  var likeid = "like";
-  var likeid_conc = likeid;
-  
-    changeImage(heart);
-
-  function changeImage(heart) {
-    //  heart.src = heart.bln ? "heart0.png" : "heart1.png";
-    heart.bln = !heart.bln;  /* assigns opposite boolean value always */
-    if (heart.src = !heart.bln){
-      heart.src = "heart0.png"; 
-      for (i=1; i<=3; i++){
-        if (i = id_heart_number){
-        likeid_conc = likeid_conc + i;
-        document.getElementById(likeid_conc).innerHTML="0 like";}
-    }
- }
- else {
-  heart.src = "heart1.png"; 
-      for (i=1; i<=3; i++){
-        if (i = id_heart_number){
-    
-        likeid_conc = likeid_conc + i;
-        document.getElementById(likeid_conc).innerHTML="1 like";}
-    }
- }
- }
-}
-
-window.addEventListener( "load", thisLike, false );
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "gallery.js"></script>
 
 </head>
 <body>
@@ -330,34 +217,33 @@ window.addEventListener( "load", thisLike, false );
           <ul>
             <li><a href="index.html" >Home</a></li>
             <li><a href="gallery.html" class="current">Gallery</a></li>
-            <li><a href="blog.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
           </ul>
         </div>
       </nav>
       <br>
-      
+
       <section id="storysection">
-       
+        
         <img src = "watterfall.jpg" class = "foreground-image"  
-        style="margin-left: 8em"; 
-         alt = "watterfall.jpg"; >
-         <!-- id="image" onmouseover="addPicture(this)" onmouseout="oldPicture(this)" >  -->
-         <img src = "heart.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "sea.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "matka.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "candle.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "book.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "notebook.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "dandelion.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
-         <img src = "travelling.jpg" class = "foreground-image"
-         alt = "insta story picture"; >
+          style="margin-left: 8em" alt = "watterfall.jpg" id="main1"; >
+        <img src = "heart.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main2"; >
+        <img src = "sea.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main3"; >
+        <img src = "matka.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main4"; > 
+        </div><img src = "candle.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main5"; >
+        <img src = "book.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main6"; > 
+        <img src = "notebook.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main7"; > 
+        <img src = "dandelion.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main8"; > 
+        <img src = "travelling.jpg" class = "foreground-image"
+          alt = "insta story picture" id="main9"; >
          
  </section>
     <div class = "padding cont">
@@ -371,13 +257,13 @@ window.addEventListener( "load", thisLike, false );
             style="margin-left: 2em" alt = "puzzle">
             <br>
         <img src = "heart0.png" width = "25" height="22"
-            style = "margin-left: 2em " alt = "regularheart" id="hearting1" onclick="thisLike(this)"> 
+            style = "margin-left: 2em " alt = "regularheart" id="hearting1" onclick="thisLike1(this)"> 
         <img src = "comment.png" width = "25" height="22"
             style = "display: inline; " alt = "comment" id="comBut1" onclick="thisComment(this)"> 
+        <img src = "sort.png" width = "25" height="22"
+            style = "display: inline; " alt = "sort" id="sort1" onclick="thisSort(this)">
         <figcaption style="margin-left: 2em"> 
-            <!-- <i class="far fa-heart"></i>   -->
-              <!-- <input id = "comBut1" type = "button" value="comment" onclick="thisComment(this)" > -->
-            <p id = "like1">0 likes  </p> 
+            <p id = "like1">0 like </p> 
             My 1000 pieces Tower Bridge puzzle that I appsolutely <br> love. 
             <br><input type = "text" id = "txtOutput1"  />
             <br><ul id = 'txtOutput21' ></ul>
@@ -396,13 +282,15 @@ window.addEventListener( "load", thisLike, false );
         <img src = "concert.jpg" width = "400" height = "300" 
             alt = "concert">
             <br>
+            
         <img src = "heart0.png" width = "25" height="22"
-            style = "margin-left: 0em " alt = "regularheart" id="hearting2" onclick="thisLike(this)"> 
+            style = "margin-left: 0em " alt = "regularheart" id="hearting2" onclick="thisLike2(this)"> 
         <img src = "comment.png" width = "25" height="22"
-            style = "display: inline; " alt = "comment" id="comBut2" onclick="thisComment(this)"> 
+            style = "display: inline; " alt = "comment" id="comBut2" >
+        <img src = "sort.png" width = "25" height="22"
+            style = "display: inline; " alt = "sort" id="sort2" onclick="thisSort(this)">
             <figcaption> 
-              <!-- <i class="fas fa-heart"></i>   <i class="far fa-comment"></i> -->
-                <!-- <input id = "comBut2" type = "button" value="comment" onclick="thisComment(this)" > --> 
+              
                 <p id="like2">0 likes</p>    
                 A day without music is like...just kidding, I have no idea 
                 <i class="far fa-laugh-beam"
@@ -410,8 +298,9 @@ window.addEventListener( "load", thisLike, false );
                 <br>
                 <br><input type = "text" id = "txtOutput2" />
             <br><ul id = 'txtOutput22' ></ul>
-            <br><p> </p>
-            </figcaption>
+            <br><p > </p>
+          
+          </figcaption>
         </figure>
         </div>
 
@@ -427,13 +316,13 @@ window.addEventListener( "load", thisLike, false );
             alt = "berovsko_ezero">
             <br>
         <img src = "heart0.png" width = "25" height="22"
-            style = "margin-left: 0em " alt = "regularheart" id="hearting3" onclick="thisLike(this)"> 
+            style = "margin-left: 0em " alt = "regularheart" id="hearting3" onclick="thisLike3(this)"> 
         <img src = "comment.png" width = "25" height="22"
-            style = "display: inline; " alt = "comment" id="comBut3" onclick="thisComment(this)"> 
+            style = "display: inline; " alt = "comment" id="comBut3" onclick="thisComment(this)">
+        <img src = "sort.png" width = "25" height="22"
+            style = "display: inline; " alt = "sort" id="sort3" onclick="thisSort(this)"> 
             <figcaption> 
-                <!-- <i class="far fa-heart"></i>   <i class="far fa-comment"></i> -->
-                <!-- <input id = "comBut3" type = "button" value="comment" onclick="thisComment(this)" > -->
-                <p id = "like3">0 likes </p> 
+                <p id = "like3" >0 likes </p> 
                 Exploring my country with my beloved <a 
                 href="https://www.instagram.com/ampovasenior/" 
                 target="_blank" > 
@@ -448,7 +337,7 @@ window.addEventListener( "load", thisLike, false );
 </div>
 
 
-    <footer id="main-footer">
+    <footer id="my-footer">
         <div class="container">
           <p>Ana Ampova 5/2017 &copy; October, 2020 All rights reserved.</p>
           <ul>
