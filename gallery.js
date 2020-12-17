@@ -1,8 +1,8 @@
 //  SO KOMENTARI SE OSTAVENI KODOVITE 
 
-//  OD PRETHODNITE VARIJANTI. 
+//  OD PRETHODNITE VARIJANTI (so javaScript). 
 
-//  KAKO KRAEN (neiskomentiran) E OSTAVEN OPTIMALEN KOD SO JQUERY. 
+//  KAKO KRAEN E OSTAVEN KOD SO JQUERY. 
 
 
 
@@ -15,7 +15,6 @@
 
 
 $(document).ready(function(){
-  // $("[id^='heart']").mouseenter(function() {
     
         $("[id^='main']").mouseenter(function() {
             $(this).fadeOut(2500);
@@ -282,6 +281,34 @@ function start () {
     //     // });
     //   });
 
+      myStorage = window.localStorage; 
+      var $keepCom1 = $("#txtOutput21");
+      var $keepCom2 = $("#txtOutput22");
+      var $keepCom3 = $("#txtOutput23");
+
+      if(localStorage.getItem("#txtOutput21")) { 
+        $keepCom1.html(localStorage.getItem("#txtOutput21"));
+      }
+  
+      if(localStorage.getItem("#txtOutput22")) { 
+        $keepCom2.html(localStorage.getItem("#txtOutput22"));
+      }
+  
+      if(localStorage.getItem("#txtOutput23")) { 
+        $keepCom3.html(localStorage.getItem("#txtOutput23"));
+        }
+      
+      $(document).on('click', '#comBut1', function(){
+        localStorage.setItem("#txtOutput21", $keepCom1.html());
+      })
+
+      $(document).on('click', '#comBut2', function(){
+        localStorage.setItem("#txtOutput22", $keepCom2.html());
+      })
+
+      $(document).on('click', '#comBut3', function(){
+        localStorage.setItem("#txtOutput23", $keepCom3.html());
+      })
     
       $("[id^='comBut']").click(function(){
         var com = $($("#" + $(this).parent().find('input').attr('id'))).val();
@@ -289,14 +316,19 @@ function start () {
         $($("#" + $(this).parent().find('ul').attr('id'))).append(content);
         $($("#" + $(this).parent().find('input').attr('id'))).val("");
 
+
+
       if (("#" + $(this).parent().find('input').attr('id')) == ("#txtOutput1")){
-        localStorage.setItem('#txtOutput21', content);
+        var $keepCom1 = $("#txtOutput21");
+        localStorage.setItem("#txtOutput21", $keepCom1.html());
         }
       if (("#" + $(this).parent().find('input').attr('id')) == ("#txtOutput2")){
-        localStorage.setItem('#txtOutput22', content);
+        var $keepCom2 = $("#txtOutput22");
+        localStorage.setItem("#txtOutput22", $keepCom2.html());
       }
       if (("#" + $(this).parent().find('input').attr('id')) == ("#txtOutput3")){
-        localStorage.setItem('#txtOutput23', content);
+        var $keepCom3 = $("#txtOutput23");
+        localStorage.setItem("#txtOutput23", $keepCom3.html());
       }
 
       });
@@ -304,12 +336,33 @@ function start () {
       $("[id^='txtOutput']").on('click', '.btnRemove', function(){
         $(this).closest('li').fadeOut('slow', function(){
           $(this).remove();             
+
+
+        var $keepCom1 = $("#txtOutput21");
+        localStorage.setItem("#txtOutput21", $keepCom1.html());
+
+        var $keepCom2 = $("#txtOutput22");
+        localStorage.setItem("#txtOutput22", $keepCom2.html());
+
+        var $keepCom3 = $("#txtOutput23");
+        localStorage.setItem("#txtOutput23", $keepCom3.html());
+
         //   mora i remove za da iscezne skroz
       });
     });
 
       $("[id^='sort']").click(function(){       
         sortUL($("#" + $(this).parent().find('ul').attr('id')));
+
+
+        var $keepCom1 = $("#txtOutput21");
+        localStorage.setItem("#txtOutput21", $keepCom1.html());
+
+        var $keepCom2 = $("#txtOutput22");
+        localStorage.setItem("#txtOutput22", $keepCom2.html());
+
+        var $keepCom3 = $("#txtOutput23");
+        localStorage.setItem("#txtOutput23", $keepCom3.html());
       });
 
 
@@ -319,25 +372,8 @@ function start () {
             var upA = $(a).text().length;
             var upB = $(b).text().length;
             return (upA > upB) ? -1 : (upA < upB) ? 1 : 0;
-            // if (upA > upB){
-            //   return -1;}
-            // if (upA < upB){
-            //   return 1;}
-            // if (upA = upB){
-            //   return 0 ;}
         }).appendTo(selector);
     };
 
-    // var $coms2 = $('#txtOutput22'); 
-    if(localStorage.getItem("#txtOutput21")) { 
-      $('#txtOutput21').html(localStorage.getItem("#txtOutput21"));
-    }
-
-    if(localStorage.getItem("#txtOutput22")) { 
-      $('#txtOutput22').html(localStorage.getItem("#txtOutput22"));
-    }
-
-    if(localStorage.getItem("#txtOutput23")) { 
-      $('#txtOutput23').html(localStorage.getItem("#txtOutput23"));
-      }
+    
 });
