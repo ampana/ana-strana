@@ -20,17 +20,24 @@ $(document).ready(function(){
     $("[id^='colH']").click(function(){
         var color = $(this).css("background-color");
         $("#navbar").css("background", color);
-        
+        if ($(this).css("background-color") == "rgb(255, 255, 255)"){
+            $("#navbar a").css("color", "black");
+        }
     });
 
     $("[id^='colR']").click(function(){
         var color = $(this).css("background-color");
         $("#my-footer").css("background", color);
+        if ($(this).css("background-color") == "rgb(255, 255, 255)"){
+            $("#my-footer ").css("color", "black");
+            $("#my-footer .container ul li a i").css("color", "black");
+        }
     });
 
     $("[id^='colT']").click(function(){
         var color = $(this).css("background-color");
         $("body").css("background", color);
+        $(".blogTextarea").css("background", color);
         
     });
 

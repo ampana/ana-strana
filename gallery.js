@@ -1,16 +1,4 @@
-//  SO KOMENTARI SE OSTAVENI KODOVITE 
-
-//  OD PRETHODNITE VARIJANTI (so javaScript). 
-
-//  KAKO KRAEN E OSTAVEN KOD SO JQUERY. 
-
-
-
-
-
-
-
-
+//  so komentari e napraveno istoto, so js kod 
 
 
 

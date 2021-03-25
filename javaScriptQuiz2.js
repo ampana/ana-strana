@@ -1,6 +1,7 @@
 var pos2 = 0;
 var correct2 = 0;
 var test2, test_status2, question2, choice2, choices2, chA2, chB2, chC2, argument;
+var checked2 = 0; 
 
 var questions2 = [
   {
@@ -58,7 +59,7 @@ var questions2 = [
     test2.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA2+"</label><br>";
     test2.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB2+"</label><br>";
     test2.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC2+"</label><br><br>";
-    test2.innerHTML += "<button onclick='checkAnswer2()' style='display: inline block;font-size: 18px;color: #fff;background: #333;padding: 13px 20px;text-align: center;border: none;cursor: pointer;font-family: sans-serif;'>Submit Answer</button>";
+    test2.innerHTML += "<button onclick='checkAnswer2()' style='display: inline block;font-size: 18px;color: #fff;background: #333;padding: 13px 20px;text-align: center;border: none;cursor: pointer;font-family: Verdana, Geneva, Tahoma, sans-serif;'>Submit Answer</button>";
   }
   
   function checkAnswer2(){
@@ -67,13 +68,20 @@ var questions2 = [
     for(var i=0; i<choices2.length; i++){
       if(choices2[i].checked){
         choice2 = choices2[i].value;
+        checked2++;
       }
     }
+    if(checked2){
     if(choice2 == questions2[pos2].answer2){
       correct2++;
     }
     pos2++;
+    checked2 = 0; 
     renderQuestion2();
   }
+    else { 
+      window.alert("Please check one answer :) ");
+    }
+}
 
   window.addEventListener("load", renderQuestion2, false);

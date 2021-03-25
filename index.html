@@ -8,211 +8,9 @@
       crossorigin="anonymous"
     ></script>
     <title>My page | Welcome</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.7em;
-      }
-      a {
-        color: #333;
-        text-decoration: none;
-      }
-      h1,
-      h2,
-      h3 {
-        padding-bottom: 20px;
-      }
-      p {
-        margin: 10px 0px;
-      }
-      .container {
-        margin: auto;
-        max-width: 1100px;
-        overflow: auto;
-        padding: 0 20px;
-      }
-      .text-primary {
-        color: #f7c08a;
-      }
-      .lead {
-        font-size: 20px;
-        color: black;
-      }
-      .btn {
-        display: inline block;
-        font-size: 18px;
-        color: #fff;
-        background: #333;
-        padding: 13px 20px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-      }
-      .btn:hover {
-        color: #f7c08a;
-        background: #333;
-      }
-      .btn-light {
-        background: #f4f4f4;
-        color: #333;
-      }
-      a.btn-light:hover {
-        background: #f7c08a;
-        color: #fff;
-      }
-      .bg-dark {
-        background: #333;
-        color: #f7c08a;
-      }
-      .bg-light {
-        background: #f4f4f4;
-        color: #333;
-      }
-      .bg-primary {
-        color: #333;
-        background: #f7c08a;
-      }
-      ul{
-        list-style: none;
-      }
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-      .dropdown .hobbies-list {
-        list-style: none;
-        text-decoration: none;
-        display: none;
-        z-index: 1;
-      }
-      .dropdown:hover .hobbies-list li a {
-        display: block;
-        font-size: 18px;
-        color: #333;
-        background: #fff;
-        padding: 13px 20px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-      }
-      .dropdown:hover .hobbies-list li a:hover {
-        color: #f7c08a;
-        background: #333;
-      }
-      .dropdown:hover .hobbies-list {
-        display: block;
-      }
 
-      #navbar {
-        background: #333;
-        color: white;
-        overflow: auto;
-      }
-      #navbar a {
-        color: white;
-      }
-      #navbar .logo {
-        float: left;
-        padding: 20px;
-      }
-      #navbar ul {
-        list-style: none;
-        float: right;
-      }
-      #navbar ul li {
-        float: left;
-      }
-      #navbar ul li a {
-        display: block;
-        padding: 20px;
-        text-align: center;
-      }
-      #navbar ul li a:hover {
-        background: #444;
-        color: #f7c08a;
-      }
-      #navbar .current {
-        background: #444;
-        color: #f7c08a;
-      }
-      #showcase {
-        background: url("photo-showcase.jpg") no-repeat center center/cover;
-        height: 600px;
-      }
-      .showcase-content {
-        color: white;
-        text-align: center;
-        padding-top: 170px;
-      }
-      .showcase-content h1 {
-        font-size: 60px;
-        line-height: 1.2em;
-      }
-      .showcase-content p {
-        padding: 10px;
-        line-height: 1.7em;
-      }
-      #home-cv {
-        height: 450px;
-      }
-      #home-cv #content {
-        float: left;
-        width: 50%;
-        min-height: 100%;
-        background: url("/pictureofme.jpg") no-repeat center center/cover; 
-      }
-      #home-cv #info {
-        float: right;
-        width: 50%;
-        min-height: 100%;
-        text-align: center;
-        padding: 50px 30px;
-        overflow: hidden;
-      }
-      #home-cv #info p {
-        color: #fff;
-        padding-bottom: 30px;
-      }
-      #home-cv #info h2 {
-        color: white;
-      }
-      #features #box {
-        float: left;
-        width: 33.3%;
-        padding: 50px;
-        text-align: center;
-      }
-      #features i {
-        margin-bottom: 10px;
-      }
-      #main-footer {
-        background: #444;
-        color: white;
-        padding: 5px;
-        height: auto;
-      }
-      #main-footer p{
-        float: left;
-        margin-top: 2em;
-      }
-      #main-footer .container ul{
-        float:right;
-      }
-      #main-footer .container ul li{
-        float: left;
-        padding: 1em;
-        font-size: 2em;
-      }
-      #main-footer .container ul li a i{
-        color: white;
-      }
-    </style>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
   </head>
   <body>
     <header>
@@ -222,8 +20,8 @@
           <ul>
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
       </nav>
@@ -242,7 +40,8 @@
           my home town Veles. Parallel to it i finished a course in physiotherapy and
           became licenced therapist. Now I am a forth year student on the
           Faculty of Electrical Engineering and Information Technologies in
-          Skopje. I'm looking forward to becoming a great engineer.
+          Skopje. I'm looking forward to becoming a great engineer. I am also interested in 
+          mmachine learning and web development. 
         </p>
         <a href="/gallery.html" class="btn btn-light">Gallery</a>
       </div>
@@ -253,8 +52,8 @@
         <i class="fas fa-dice fa-3x"></i>
         <h3>Board games</h3>
         <p>
-          My favorite hobby involves playing board games while hanging with my
-          friends.
+          I love hanging with my
+          friends and playing board games.
         </p>
         <br />
         <div class="dropdown">
@@ -323,7 +122,7 @@
         <i class="fas fa-utensils fa-3x"></i>
         <h3>Cooking</h3>
         <p>
-          A bit strange for an engineer, but I love spending my free time in the
+          A bit strange for an engineer, but I love spending my spare time in the
           kitchen cooking.
         </p>
         <br />
@@ -358,7 +157,7 @@
     <footer id="main-footer">
       <div class="container">
 
-        <p>Ana Ampova 5/2017 &copy; October, 2020 All rights reserved.</p>
+        <p>Ana Ampova 5/2017 &copy; 2021 All rights reserved.</p>
         <ul>
           <li> <a href="https://www.facebook.com/anaa1609/" target="_blank"><i class="fab fa-facebook"></i></a> </li>
           <li><a href="https://www.instagram.com/amp.ana/" target="_blank"><i class="fab fa-instagram"></i></a></li>

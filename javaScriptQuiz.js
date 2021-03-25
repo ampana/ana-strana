@@ -1,6 +1,7 @@
 var pos = 0;
 var correct = 0;
 var test, test_status, question, choice, choices, chA, chB, chC;
+var checked1 = 0; 
 
 var questions = [
   {
@@ -50,7 +51,7 @@ var questions = [
     test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>";
     test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>";
     test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br><br>";
-    test.innerHTML += "<button onclick='checkAnswer()' style='display: inline block;font-size: 18px;color: #fff;background: #333;padding: 13px 20px;text-align: center;border: none;cursor: pointer;font-family: sans-serif;'>Submit Answer</button>";
+    test.innerHTML += "<button onclick='checkAnswer()' style='display: inline block;font-size: 18px;color: #fff;background: #333;padding: 13px 20px;text-align: center;border: none;cursor: pointer;font-family: Verdana, Geneva, Tahoma, sans-serif;'>Submit Answer</button>";
   
   }
   
@@ -60,14 +61,21 @@ var questions = [
     for(var i=0; i<choices.length; i++){
       if(choices[i].checked){
         choice = choices[i].value;
+        checked1++;
       }
     }
+    if(checked1){
     if(choice == questions[pos].answer){
       correct++;
     }
     pos++;
+    checked1 = 0; 
     renderQuestion();
   }
+    else { 
+      window.alert("Please check one answer :) ");
+    }
+}
 
   window.addEventListener("load", renderQuestion, false);
 
